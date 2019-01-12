@@ -1,5 +1,6 @@
 import re
 
+
 class TODOconf:
     titleFormat = "File name: {0}\n"
     lineFormat = 4*" " + "Line {0}: {1}\n"
@@ -35,15 +36,18 @@ class CommentStyle:
 
 
 fileTypeStyles = {
-    'py' : CommentStyle('python', "#", '"""', '"""')
+    'py': CommentStyle('python', "#", '"""', '"""')
 }
+
 
 def get_comments(fileObject, commentStyle):
     """
-    Returns a list of pairs whose first element is the line number that a comment was found on, and whose second element is the content of the comment.
+    Returns a list of pairs whose first element is the line number that a comment was found on, and whose second element
+    is the content of the comment.
     :param fileObject: The object corresponding to the file whose contents is being read from.
     :param commentStyle: An instance of the class
-    :return: Of the form [(int, string), ...] where the first element of the pair is the line number and the string is the comment content.
+    :return: Of the form [(int, string), ...] where the first element of the pair is the line number and the string is
+    the comment content.
     """
     lineNumber = 0
     for line in fileObject:
