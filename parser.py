@@ -1,3 +1,5 @@
+import re
+
 class TODOconf:
     titleFormat = "File name: {0}\n"
     lineFormat = 4*" " + "Line {0}: {1}\n"
